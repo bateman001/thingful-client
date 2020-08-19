@@ -8,7 +8,7 @@ export default function PrivateRoute({ component, ...props }) {
     <Route
       {...props}
       render={componentProps => (
-        TokenService.hasAuthToken()
+        TokenService.hasAuthToken() //does this return true
           ? <Component {...componentProps} />
           : <Redirect
               to={{
